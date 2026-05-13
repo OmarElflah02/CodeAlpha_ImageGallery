@@ -46,3 +46,4 @@ This project was developed as part of the **CodeAlpha Internship Task**.
 
 ## 🌐 Live Demo
 
+https://omarelflah02.github.io/CodeAlpha_ImageGallery/
