@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	background: #111;
+	color: white;
+	min-height: 100vh;
+	padding: 40px;
+}
+
+.gallery-container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 40px;
+}
+
+.filters {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+}
+
+.filters button {
+	padding: 10px 20px;
+	border: none;
+	background: #222;
+	color: white;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: 0.3s;
+}
+
+.filters button:hover,
+.filters .active {
+	background: #ff9800;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+.card {
+	overflow: hidden;
+	border-radius: 15px;
+	cursor: pointer;
+	position: relative;
+}
+
+.card img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	transition: 0.5s ease;
+	filter: grayscale(20%);
+}
+
+.card:hover img {
+	transform: scale(1.1);
+	filter: grayscale(0%);
+}
+
+/* Lightbox */
+
+.lightbox {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.9);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.lightbox.show {
+	display: flex;
+}
+
+.lightbox img {
+	width: 80%;
+	height: 80%;
+	object-fit: cover;
+	max-width: 900px;
+	border-radius: 15px;
+}
+
+.lightbox button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.2);
+	color: white;
+	border: none;
+	font-size: 30px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.prev {
+	left: 30px;
+}
+
+.next {
+	right: 30px;
+}
+
+.close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 40px;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+@media (max-width: 1024px) {
+	.lightbox img {
+		width: 70%;
+		height: 50%;
+	}
+	h1 {
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 768px) {
+	.lightbox img {
+		height: 40%;
+	}
+}
+@media (max-width: 640px) {
+	.lightbox button {
+		font-size: 20px;
+		padding: 5px 10px;
+	}
+	.prev {
+		left: 10px;
+	}
+	.next {
+		right: 10px;
+	}
+}

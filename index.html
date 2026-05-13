@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Gallery</title>
+		<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<section class="gallery-container">
+			<h1>Image Gallery</h1>
+			<!-- Filter Buttons -->
+			<div class="filters">
+				<button class="active" data-filter="all">All</button>
+				<button data-filter="travel">Travel</button>
+				<button data-filter="technology">Technology</button>
+				<button data-filter="lifestyle">Lifestyle</button>
+			</div>
+
+			<!-- Gallery -->
+			<div class="gallery"></div>
+		</section>
+
+		<!-- Lightbox -->
+		<div class="lightbox">
+			<span class="close"><i class="hgi hgi-stroke hgi-rounded hgi-cancel-01"></i></span>
+			<button class="prev"><i class="hgi hgi-stroke hgi-rounded hgi-arrow-left-01"></i></button>
+			<img class="lightbox-img" />
+			<button class="next"><i class="hgi hgi-stroke hgi-rounded hgi-arrow-right-01"></i></button>
+		</div>
+		<script src="data.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
